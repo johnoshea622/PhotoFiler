@@ -1,0 +1,51 @@
+name: Windows Build
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install build tools and dependencies
+        shell: pwsh
+        run: |
+          python -m pip install --upgrade pip
+          # Core deps (includes torch/transformers/opencv), GUI helper, packager
+          python -m pip install -r requirements.txt pillow-heif tkinterdnd2 pyinstaller
+          # Inno Setup for installer generation
+          choco install -y innosetup
+
+      - name: Build executable with PyInstaller
+        shell: pwsh
+        run: |
+          python -m PyInstaller --clean --noconfirm packaging\pyinstaller_photo_filer.spec
+
+      - name: Build Windows installer (Inno Setup)
+        shell: pwsh
+        run: |
+          & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" packaging\windows_installer.iss
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: PhotoFiler-windows
+          path: |
+            dist\PhotoFiler.exe
+            PhotoFiler-Setup.exe
+          if-no-files-found: error
+
+    # Note: artifacts can be large (~1GB+) because the offline model is bundled

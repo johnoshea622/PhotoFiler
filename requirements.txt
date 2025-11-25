@@ -1,0 +1,14 @@
+# Photo Processing Dependencies
+# Core image processing
+Pillow>=10.0.0
+pillow-heif>=0.15.0
+
+# Computer vision and AI
+opencv-python>=4.8.0
+transformers>=4.30.0
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Utilities
+numpy>=1.26.0
+tqdm>=4.65.0

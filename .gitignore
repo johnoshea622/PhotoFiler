@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+venv-windows/
+ENV/
+*.egg-info/
+dist-backup/
+build/
+*.egg
+
+# Virtual environments
+photo-sorting/
+photofiler-venv/
+
+# PyInstaller
+build/
+dist/
+dist_backup/
+*.spec.lock
+
+# Logs
+*.log
+*.csv
+ai_rename_log.csv
+sort_log.csv
+duplicate_report.csv
+master_photo_processing_log.csv
+
+# Temporary files
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Input/Output folders (don't commit photos)
+input photos/
+output photos/
+output photos in folders/
+
+# Windows
+*.bat.bak
+venv-windows/
+C:/Temp/
+
+# macOS
+.AppleDouble
+.LSOverride
+Icon
+
+# Model cache (too large for git, will be downloaded by GitHub Actions)
+packaging/models/
+
+# Inno Setup output
+PhotoFiler-Setup.exe
