@@ -5,10 +5,21 @@ from pathlib import Path
 
 block_cipher = None
 
-# Resolve to the repo root so paths work whether PyInstaller is invoked from
-# the project root or the packaging directory.
-spec_dir = Path(SPECPATH).resolve().parent
-repo_root = spec_dir.parent
+# Resolve repo root robustly for both local and GitHub Actions paths.
+spec_path = Path(SPECPATH).resolve()
+spec_dir = spec_path.parent
+candidates = [
+    spec_dir.parent,       # .../repo
+    Path.cwd().resolve(),  # current working directory
+]
+repo_root = None
+for candidate in candidates:
+    if (candidate / "master_photo_processor.py").exists():
+        repo_root = candidate
+        break
+if repo_root is None:
+    raise FileNotFoundError("Unable to locate repo root from spec file.")
+
 script = str(repo_root / "master_photo_processor.py")
 
 icons_dir = repo_root / "packaging/icons"
