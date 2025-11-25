@@ -5,12 +5,15 @@ from pathlib import Path
 
 block_cipher = None
 
-# Use SPECPATH which PyInstaller provides (path to this .spec file)
-root = Path(SPECPATH).parent
-script = str(root / "master_photo_processor.py")
+# Resolve to the repo root so paths work whether PyInstaller is invoked from
+# the project root or the packaging directory.
+spec_dir = Path(SPECPATH).resolve().parent
+repo_root = spec_dir.parent
+script = str(repo_root / "master_photo_processor.py")
 
-icon_mac = root / "packaging/icons/PhotoFiler.icns"
-icon_win = root / "packaging/icons/PhotoFiler.ico"
+icons_dir = repo_root / "packaging/icons"
+icon_mac = icons_dir / "photo_filer.icns"
+icon_win = icons_dir / "photo_filer.ico"
 icon_file = None
 if sys.platform == "darwin" and icon_mac.exists():
     icon_file = str(icon_mac)
@@ -18,7 +21,7 @@ elif sys.platform.startswith("win") and icon_win.exists():
     icon_file = str(icon_win)
 
 # Only bundle the PyTorch weights and tokenizer bits to keep size down.
-model_dir = root / "packaging/models/clip-vit-base-patch32"
+model_dir = repo_root / "packaging/models/clip-vit-base-patch32"
 model_files = [
     "README.md",
     "config.json",
@@ -30,6 +33,13 @@ model_files = [
     "tokenizer_config.json",
     "vocab.json",
 ]
+
+missing_models = [name for name in model_files if not (model_dir / name).exists()]
+if missing_models:
+    raise FileNotFoundError(
+        f"Missing model files in {model_dir}: {', '.join(missing_models)}"
+    )
+
 model_datas = [
     (str(model_dir / name), f"packaging/models/clip-vit-base-patch32/{name}")
     for name in model_files
@@ -37,7 +47,7 @@ model_datas = [
 
 a = Analysis(
     [script],
-    pathex=[str(root)],
+    pathex=[str(repo_root)],
     binaries=[],
     datas=model_datas,
     hiddenimports=[

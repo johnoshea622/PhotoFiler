@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          lfs: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -28,6 +30,39 @@ jobs:
           python -m pip install -r requirements.txt pillow-heif tkinterdnd2 pyinstaller
           # Inno Setup for installer generation
           choco install -y innosetup
+
+      - name: Fetch CLIP model (only if missing)
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from huggingface_hub import snapshot_download
+
+          target = Path("packaging/models/clip-vit-base-patch32")
+          files = [
+              "README.md",
+              "config.json",
+              "merges.txt",
+              "preprocessor_config.json",
+              "pytorch_model.bin",
+              "special_tokens_map.json",
+              "tokenizer.json",
+              "tokenizer_config.json",
+              "vocab.json",
+          ]
+
+          missing = [name for name in files if not (target / name).exists()]
+          if missing:
+              print(f"Downloading CLIP model to {target} ...")
+              snapshot_download(
+                  "openai/clip-vit-base-patch32",
+                  local_dir=target,
+                  local_dir_use_symlinks=False,
+                  allow_patterns=files,
+              )
+          else:
+              print("CLIP model already present; skipping download.")
+          PY
 
       - name: Build executable with PyInstaller
         shell: pwsh
@@ -44,8 +79,8 @@ jobs:
         with:
           name: PhotoFiler-windows
           path: |
-            dist\PhotoFiler.exe
-            PhotoFiler-Setup.exe
+            dist\PhotoFiler\PhotoFiler.exe
+            packaging\Output\PhotoFiler-Setup.exe
           if-no-files-found: error
 
     # Note: artifacts can be large (~1GB+) because the offline model is bundled

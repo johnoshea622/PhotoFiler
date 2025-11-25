@@ -1,0 +1,143 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "\\\\Mac\\Home\\Library\\CloudStorage\\OneDrive-TCDGroup\\0 TCD MyDocs\\01. BMI Projects\\96. Photo Filer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|\\\\Mac\\Home\\Library\\CloudStorage\\OneDrive-TCDGroup\\0 TCD MyDocs\\01. BMI Projects\\96. Photo Filer\\packaging\\windows_installer.iss||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|\\\\Mac\\Home\\Library\\CloudStorage\\OneDrive-TCDGroup\\0 TCD MyDocs\\01. BMI Projects\\96. Photo Filer\\BUILD_COMPLETE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|\\\\Mac\\Home\\Library\\CloudStorage\\OneDrive-TCDGroup\\0 TCD MyDocs\\01. BMI Projects\\96. Photo Filer\\rebuild-installer-local.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|\\\\Mac\\Home\\Library\\CloudStorage\\OneDrive-TCDGroup\\0 TCD MyDocs\\01. BMI Projects\\96. Photo Filer\\create-portable-dist.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|\\\\Mac\\Home\\Library\\CloudStorage\\OneDrive-TCDGroup\\0 TCD MyDocs\\01. BMI Projects\\96. Photo Filer\\build-from-temp.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|\\\\Mac\\Home\\Library\\CloudStorage\\OneDrive-TCDGroup\\0 TCD MyDocs\\01. BMI Projects\\96. Photo Filer\\build-clean-installer.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Temp\\rebuild-and-install.bat||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "rebuild-and-install.bat",
+              "DocumentMoniker": "C:\\Temp\\rebuild-and-install.bat",
+              "ToolTip": "C:\\Temp\\rebuild-and-install.bat",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000614|",
+              "WhenOpened": "2025-11-25T11:50:22.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "build-clean-installer.ps1",
+              "DocumentMoniker": "\\\\Mac\\Home\\Library\\CloudStorage\\OneDrive-TCDGroup\\0 TCD MyDocs\\01. BMI Projects\\96. Photo Filer\\build-clean-installer.ps1",
+              "RelativeDocumentMoniker": "build-clean-installer.ps1",
+              "ToolTip": "\\\\Mac\\Home\\Library\\CloudStorage\\OneDrive-TCDGroup\\0 TCD MyDocs\\01. BMI Projects\\96. Photo Filer\\build-clean-installer.ps1",
+              "RelativeToolTip": "build-clean-installer.ps1",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-25T11:11:49.193Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "build-from-temp.ps1",
+              "DocumentMoniker": "\\\\Mac\\Home\\Library\\CloudStorage\\OneDrive-TCDGroup\\0 TCD MyDocs\\01. BMI Projects\\96. Photo Filer\\build-from-temp.ps1",
+              "RelativeDocumentMoniker": "build-from-temp.ps1",
+              "ToolTip": "\\\\Mac\\Home\\Library\\CloudStorage\\OneDrive-TCDGroup\\0 TCD MyDocs\\01. BMI Projects\\96. Photo Filer\\build-from-temp.ps1",
+              "RelativeToolTip": "build-from-temp.ps1",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-25T10:51:43.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "create-portable-dist.ps1",
+              "DocumentMoniker": "\\\\Mac\\Home\\Library\\CloudStorage\\OneDrive-TCDGroup\\0 TCD MyDocs\\01. BMI Projects\\96. Photo Filer\\create-portable-dist.ps1",
+              "RelativeDocumentMoniker": "create-portable-dist.ps1",
+              "ToolTip": "\\\\Mac\\Home\\Library\\CloudStorage\\OneDrive-TCDGroup\\0 TCD MyDocs\\01. BMI Projects\\96. Photo Filer\\create-portable-dist.ps1",
+              "RelativeToolTip": "create-portable-dist.ps1",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-25T10:50:44.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "rebuild-installer-local.ps1",
+              "DocumentMoniker": "\\\\Mac\\Home\\Library\\CloudStorage\\OneDrive-TCDGroup\\0 TCD MyDocs\\01. BMI Projects\\96. Photo Filer\\rebuild-installer-local.ps1",
+              "RelativeDocumentMoniker": "rebuild-installer-local.ps1",
+              "ToolTip": "\\\\Mac\\Home\\Library\\CloudStorage\\OneDrive-TCDGroup\\0 TCD MyDocs\\01. BMI Projects\\96. Photo Filer\\rebuild-installer-local.ps1",
+              "RelativeToolTip": "rebuild-installer-local.ps1",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-25T10:41:04.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BUILD_COMPLETE.md",
+              "DocumentMoniker": "\\\\Mac\\Home\\Library\\CloudStorage\\OneDrive-TCDGroup\\0 TCD MyDocs\\01. BMI Projects\\96. Photo Filer\\BUILD_COMPLETE.md",
+              "RelativeDocumentMoniker": "BUILD_COMPLETE.md",
+              "ToolTip": "\\\\Mac\\Home\\Library\\CloudStorage\\OneDrive-TCDGroup\\0 TCD MyDocs\\01. BMI Projects\\96. Photo Filer\\BUILD_COMPLETE.md",
+              "RelativeToolTip": "BUILD_COMPLETE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-25T10:13:32.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "windows_installer.iss",
+              "DocumentMoniker": "\\\\Mac\\Home\\Library\\CloudStorage\\OneDrive-TCDGroup\\0 TCD MyDocs\\01. BMI Projects\\96. Photo Filer\\packaging\\windows_installer.iss",
+              "RelativeDocumentMoniker": "packaging\\windows_installer.iss",
+              "ToolTip": "\\\\Mac\\Home\\Library\\CloudStorage\\OneDrive-TCDGroup\\0 TCD MyDocs\\01. BMI Projects\\96. Photo Filer\\packaging\\windows_installer.iss",
+              "RelativeToolTip": "packaging\\windows_installer.iss",
+              "ViewState": "AgIAACoAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAeASURBVFhHxZd7cFRXHcc/596770eeSwIhoBRoeVkoBSqRAtOCCsUiKKXMIJ1WKE5RlKJ2pLQj4EhH7WOKijNqS60FB4cq7XSsOFjaUluo7YRSHomhEEIS8thHHpu9e\u002B89xz/uErJJKFaZ8bvznd29Z3e/3/N73bPw/4RSSvS/1hc/3fWK6n/tv0FRQWT9fYtn7QBk/7WPNfCTZ15WG\u002B9Z2P/yfwQpJe3xhHrulSMCIBL0P5SJN\u002BxYf//Xuvt\u002BTuv7pj\u002BUUli2g2k56pMya0vl8XgB\u002BPyt0\u002BhMZ7b7i4evA/S\u002BGlc1IBVIpT4xFaDprlZByMett9ykOtOZ7b/ae3DjEzt3hS5pXMWARCqFI5XoyZiiuj4hXj7WKvYeaRYHjrWIhpaUsCxbSKmEVORTuiYAKmMRKodEe00EiiseuBQJI1\u002ByHxScaupg3\u002Bk071xUdDs6GUuRSkviSZOutjg3BBKsvDnIytvGEAoGELmqUgpUbn9SSsoLA8KybObfOo2/vn70sZ1/OJBee9e8X1yxCEcsWBuomn172h7zOcqiHsI\u002BDQl0ZhUXux0aUjb1bVlamruRzWcZRTNPr57GzMljEEJzEygVv9l38IoaG1ctCA26WDZ/TXTo9IV/nlpVNeeGIV6GhnWCHoElIW5KGrsczqQcauIWtS0myeY2uFCHt6mGHWtmsmTeLWja5ewqlEK5CbFtGytrsufVI2LjqgWlA2qgcPa9emjcnBfGT585Z3yZl/GlHiYUexhX5GF0gcHIiEFFxGBYRKc8alBU5EUURyFWQraolHVP7ef1d6px8ooSJAKJQOgGwVBYKCUBxAADFFSuHXbTnIUVhTmhkO4yqBHzaxT5BFGPIOQRBD2CoE/DCHohEoLCArKhAtZvf5ZEInlZXKpeKuV2l5LuTMoz4JmyPOybuPCRgqBOxK8R8AiCuivo0wUeDXQBWl\u002BC\u002B8LrgYAfwiHOd2R4Zs9LOI50hfu1qJMzMcCAjHxqiVEYG6IbAiUEYQNifkGbKWnPSDqyim5bkXEUpgNZCZZ0dwgKPDr4fRDws3v/AdLpHhyZM5EXBZf5BoZOEzJY8QUHyEiI\u002BRTlQY2TSZtznQ7nux0upB1aeyRxU5HKSjqykk5L4pg9TIv2sOQ6H0tvjLFk7gSmzJjEmk1bMM1sbphdplJua5I3B6QtlDcyKW0pIkaW0SURqltN4pZG1KuhCzAdRcJUNKUdLqYlrRlJMp1l4VCHZxfPJOoRCDcWZCR84wc/wpYSPbfbXinlDjnyImCmBNKJWlacZRMLqW7q5kCjTV2HQ03KpiZlU5tyqOuwOdvpUN/l0NSZ5bOFJk/fcT0Rj8AjwKOBVwO/BkLkhz4vDbJ/CjQlkI1q2/xSvEKxo7qDEwmHUwmbk/EcEzankza1KZszSZNk83lKZYqt\u002B97ke8\u002B9SrzH7P05ctOwtxMGpKFfBIxwaOTS28aWfGXySH731mnOd8OppM2HCZvjCZsPEjbHExYnEjY1SYvWLhNTC7DnRIq9/zjJrEnXUeD3kdtYL6QCR6o8DmhDvaRChMqGb96y8othn6Y4\u002BO5pZLKNVDJFfaKbf8V7qI1nOBPvoSnRRU8qCZ1t0FzL7ZEEbzy8jEVTRtOeNtnztzddUeXWwmBt6Eahbwqkii1ZOH/5qOIIhlCkm\u002BuhvRGSzZBqwUm1YidbkakWSDVD4wk\u002BY9axe8Vk/rRhKZOGFpHsybLi2w9z\u002BL0P6LTh8PEaLDMLQkNK8jigDR3dmL1gTpXPq0HU0Fg/bxycew\u002Ba66C9AVo\u002BgobjhOr/yeJIC/tWTuXw5uUsmzoanwa1F\u002BMsWr2Bg9V12Erx9\u002BqTPPXL3/Kd1V9H0w0cpfIoFb0pcNtQaJWVw8oRgCFg6z138qWqKRx6/ySptElpUQETRg1n\u002BtiRRH0GHuGe5Xok7D/0Nuu3PkFLjwLL4sSpWurrPmLTt9YRikSwpRpw7nMj0NeAtJvrGy9y8\u002BgR6AJ8AqrGjmDm2BGo3MFRAEK4lZ1VUNPYwqOP7\u002BTFQ0fBCEAmDd0dtDRc4NHt2whFormCHGhgQA2ITNdffv7rXS0pS7rhyYlpwp39InecTTvw/rkmHtj2JNMX38uLb1SD0qAzCR1xbvx0BT/74SMUFpfmt93HzIFecyJaOm/Woq\u002B\u002BsOnBb5ZOm3g9Ru5GaStJ7dkGXnv7XV468BpvHT2G1P3ulywLshnCXp27v3wHK\u002B6\u002Bi2A4jEAg3H0MiqBPE8/v2cePv3tf7JIB99kbrCQQWRUpLZsRKy8vLS\u002BvmFFSWsaQWIzOZIoPT5ymtT1B1rIoiIQYUTGM6VOnMHfubIqLS3oPoTlc0UDYp4vnd/\u002BR7d9f3WuAXD1IQEcIvxCa98EtT7bduXSZmw/AcRwc20YphaZp6IaBrmm9632hXcXA7/fs5bGH7o/1vR3bOdcWSnUp6SSFZhANeBEIJRDK0A3l8/mV3x9QXq9P6ZquQCgGefQfvf058Hbs4pJrBThKSbdvBymi/4mXHA5iIA9KuVbCfkNcS6IEMjcHBiavDzZs3XHFPF4LPL55XV4RDgYdiPb/P3cN4fwb35vLM6Bi5fQAAAAASUVORK5CYII=",
+              "WhenOpened": "2025-11-25T09:58:22.343Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
