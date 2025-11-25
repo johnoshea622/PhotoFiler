@@ -30,28 +30,28 @@ jobs:
       shell: bash
       run: |
         python - <<'PY'
-from pathlib import Path
-from huggingface_hub import snapshot_download
+          from pathlib import Path
+          from huggingface_hub import snapshot_download
 
-target = Path("packaging/models/clip-vit-base-patch32")
-snapshot_download(
-    "openai/clip-vit-base-patch32",
-    local_dir=target,
-    local_dir_use_symlinks=False,
-    allow_patterns=[
-        "README.md",
-        "config.json",
-        "merges.txt",
-        "preprocessor_config.json",
-        "pytorch_model.bin",
-        "special_tokens_map.json",
-        "tokenizer.json",
-        "tokenizer_config.json",
-        "vocab.json",
-    ],
-)
-print(f"Downloaded model files to: {target.resolve()}")
-PY
+          target = Path("packaging/models/clip-vit-base-patch32")
+          snapshot_download(
+              "openai/clip-vit-base-patch32",
+              local_dir=target,
+              local_dir_use_symlinks=False,
+              allow_patterns=[
+                  "README.md",
+                  "config.json",
+                  "merges.txt",
+                  "preprocessor_config.json",
+                  "pytorch_model.bin",
+                  "special_tokens_map.json",
+                  "tokenizer.json",
+                  "tokenizer_config.json",
+                  "vocab.json",
+              ],
+          )
+          print(f"Downloaded model files to: {target.resolve()}")
+        PY
     
     - name: Build executable with PyInstaller
       run: |
