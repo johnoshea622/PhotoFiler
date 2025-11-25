@@ -9,75 +9,91 @@ on:
 jobs:
   build-windows:
     runs-on: windows-latest
-    
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-    
-    - name: Set up Python 3.12
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.12'
-        architecture: 'x64'
-    
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-        pip install tkinterdnd2 pyinstaller
 
-    - name: Fetch CLIP model (PyTorch only)
-      shell: bash
-      run: |
-        python - <<'PY'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          architecture: 'x64'
+
+      - name: Install dependencies
+        shell: pwsh
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+          python -m pip install tkinterdnd2 pyinstaller
+
+      - name: Fetch CLIP model (only if missing)
+        shell: bash
+        run: |
+          python - <<'PY'
           from pathlib import Path
           from huggingface_hub import snapshot_download
 
           target = Path("packaging/models/clip-vit-base-patch32")
-          snapshot_download(
-              "openai/clip-vit-base-patch32",
-              local_dir=target,
-              local_dir_use_symlinks=False,
-              allow_patterns=[
-                  "README.md",
-                  "config.json",
-                  "merges.txt",
-                  "preprocessor_config.json",
-                  "pytorch_model.bin",
-                  "special_tokens_map.json",
-                  "tokenizer.json",
-                  "tokenizer_config.json",
-                  "vocab.json",
-              ],
-          )
-          print(f"Downloaded model files to: {target.resolve()}")
-        PY
-    
-    - name: Build executable with PyInstaller
-      run: |
-        python -m PyInstaller --clean --noconfirm packaging/pyinstaller_photo_filer.spec
-    
-    - name: Download and install Inno Setup
-      run: |
-        Invoke-WebRequest -Uri "https://jrsoftware.org/download.php/is.exe" -OutFile "innosetup-install.exe"
-        Start-Process -FilePath "innosetup-install.exe" -ArgumentList "/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART" -Wait
-      shell: powershell
-    
-    - name: Build installer with Inno Setup
-      run: |
-        & "C:\Program Files (x86)\Inno Setup 6\iscc.exe" packaging\windows_installer.iss
-      shell: powershell
-    
-    - name: Upload installer artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: PhotoFiler-Windows-Installer
-        path: packaging/Output/PhotoFiler-Setup.exe
-    
-    - name: Create Release
-      if: startsWith(github.ref, 'refs/tags/')
-      uses: softprops/action-gh-release@v1
-      with:
-        files: packaging/Output/PhotoFiler-Setup.exe
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          files = [
+              "README.md",
+              "config.json",
+              "merges.txt",
+              "preprocessor_config.json",
+              "pytorch_model.bin",
+              "special_tokens_map.json",
+              "tokenizer.json",
+              "tokenizer_config.json",
+              "vocab.json",
+          ]
+
+          missing = [name for name in files if not (target / name).exists()]
+          if missing:
+              print(f"Downloading CLIP model to {target} ...")
+              snapshot_download(
+                  "openai/clip-vit-base-patch32",
+                  local_dir=target,
+                  local_dir_use_symlinks=False,
+                  allow_patterns=files,
+              )
+          else:
+              print("CLIP model already present; skipping download.")
+          PY
+
+      - name: Build executable with PyInstaller
+        shell: pwsh
+        run: |
+          python -m PyInstaller --clean --noconfirm packaging/pyinstaller_photo_filer.spec
+
+      - name: Download and install Inno Setup
+        shell: powershell
+        run: |
+          Invoke-WebRequest -Uri "https://jrsoftware.org/download.php/is.exe" -OutFile "innosetup-install.exe"
+          Start-Process -FilePath "innosetup-install.exe" -ArgumentList "/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART" -Wait
+
+      - name: Build installer with Inno Setup
+        shell: powershell
+        run: |
+          & "C:\Program Files (x86)\Inno Setup 6\iscc.exe" packaging\windows_installer.iss
+
+      - name: Verify build outputs
+        shell: powershell
+        run: |
+          Get-ChildItem dist\PhotoFiler
+          Get-Item packaging\Output\PhotoFiler-Setup.exe
+
+      - name: Upload installer artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: PhotoFiler-Windows-Installer
+          path: packaging/Output/PhotoFiler-Setup.exe
+
+      - name: Create Release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v1
+        with:
+          files: packaging/Output/PhotoFiler-Setup.exe
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
